@@ -653,29 +653,3 @@ style="display:block;">
         });
     })
 </script>
-<script type="text/javascript">
-    function getCurrency() {
-        var uname = $('#name').val();
-        var uemail = $('#email').val();
-
-        $.ajax({
-            url: '',
-            dataType: 'json',
-            type: 'POST',
-            data: 'name=' + uname + '&email=' + uemail,
-            success: function(json) {
-                if(json.success)
-                    $('#name').val('');
-                else {
-                    alert(json.error);
-                }
-            },
-            error: function(xhr, ajaxOptions, thrownError) {
-                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-            }
-        });
-    }
-</script>
-
-</body>
-</html>

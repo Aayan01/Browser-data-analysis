@@ -1,11 +1,14 @@
-version: "3"
+version: '3.1'
+
 services:
-  nessus_img:
-    container_name: nessus_img
+
+  nessus:
     image: tenableofficial/nessus
+    restart: always
+    container_name: nessus
+    environment:
+      USERNAME: <user>
+      PASSWORD: <password>
+      ACTIVATION_CODE: <code>
     ports:
       - 8834:8834
-    privileged: true
-    user: root
-    
-

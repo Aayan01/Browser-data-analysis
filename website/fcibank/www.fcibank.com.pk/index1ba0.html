@@ -88,8 +88,12 @@
 
         });
     </script>
+    <script>
+	    if (top != window){
+		    top.location = window.location;
+	    }
+    </script>    
 </head>
-
 <body>
 
 <div id="main_body_wrap_inner">
@@ -548,15 +552,15 @@ style="display:none;">
 <div id="requestForm" style="display: none; right: -300px;">
     <h1>Inquiry/Feedback Form</h1>
 
-    <form id="frmRequestQuote">
+   <form id="frmRequestQuote">
         <p><label for="email">Email</label></p>
-        <p><input type="text" value="" id="email" name="email"></p>
+        <p><input type="text" autocomplete="off" value="" id="email" name="email"></p>
         <p><label for="name">Name</label></p>
-        <p><input type="text" value="" id="name" name="name"></p>
+        <p><input type="text" autocomplete="off" value="" id="name" name="name"></p>
         <p><label for="mobile">Mobile</label></p>
-        <p><input type="text" value="" id="mobile" name="mobile"></p>
+        <p><input type="text" autocomplete="off" value="" id="mobile" name="mobile"></p>
         <p><label for="subject">Subject</label></p>
-        <p><input type="text" value="" id="subject" name="subject"></p>
+        <p><input type="text" autocomplete="off" value="" id="subject" name="subject"></p>
         <p><label for="description">Description.</label></p>
         <p><textarea rows="3" cols="17" id="description" name="description"></textarea></p>
         <p><input type="button" value="Submit" name="submit" id="btnRequestQuote"></p>
